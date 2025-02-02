@@ -6,3 +6,4 @@ export default defineConfig({
   assetsInclude: ['**/*.MP4', '**/*.MOV'], // Combined both file types into a single array
   base: "/video-edits",
 })
+

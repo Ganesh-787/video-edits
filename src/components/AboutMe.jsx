@@ -9,7 +9,7 @@ const AboutMe = () => {
     <div className="break"></div>
     <div id="aboutme" className="text-gray-200 py-16 px-4 md:px-20 flex items-center">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-20">
-          <div className="text-center md:text-left flex-1">
+          <div className="heading-text text-center md:text-left flex-1">
             <h2 className="text-5xl font-bold text-blue-400 mb-4">About Me</h2>
             <p className="text-lg text-gray-300 leading-relaxed max-w-md">
               Hi, I'm Ganesh! Are you looking to bring your ideas to life

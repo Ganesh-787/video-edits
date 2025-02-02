@@ -1,7 +1,9 @@
 /* Add the following CSS for the AboutMe component */
 
 /* About Me Section */
-
+.heading-text{
+  text-align: center;
+}
 .break{
     width: full;
     height: 7px;
@@ -13,6 +15,7 @@
     padding: 4rem 1rem;
     display: flex;
     align-items: center;
+    justify-content: center;
   }
   
   /* Max width container and flex layout */
