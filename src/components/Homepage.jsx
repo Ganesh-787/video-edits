@@ -53,10 +53,11 @@ const Homepage = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Get Started
+          <a href="#footer">Get Started</a>
           </motion.button>
         </div>
       </section>
+      
     </div>
   );
 };

@@ -19,7 +19,7 @@ const Footer = () => {
     <>
       <div className="w-full h-[10px] bg-gray-900 mt-12 break"></div>
 
-      <div className="footer">
+      <div className="footer" id="footer">
         <div className="max-w-7xl mx-auto grid grid-cols-1 items-center gap-12 md:flex md:flex-col">
           {/* Social Icons Section */}
           <div className="social-icons">

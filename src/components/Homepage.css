@@ -60,9 +60,16 @@
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
     cursor: pointer;
   }
+  a{
+    text-decoration: none;
+    color: #60a5fa;
+  }
   
   .hero-button:hover {
     background: #60a5fa;
+    color: #111;
+  }
+  a:hover{
     color: #111;
   }
   @media (max-width: 768px) {

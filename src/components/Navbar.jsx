@@ -63,7 +63,7 @@ const Navbar = () => {
           </a>
         </div>
 
-        <a href="#contact" className="edit-btn">Let's Edit</a>
+        <a href="#footer" className="edit-btn">Let's Edit</a>
       </motion.div>
 
       {/* Desktop Navbar */}
@@ -81,7 +81,7 @@ const Navbar = () => {
         </div>
 
         <div className="brand">Ganesh Creates</div>
-        <a href="#contact" className="edit-btn">Let's Edit</a>
+        <a href="#footer" className="edit-btn">Let's Edit</a>
       </div>
 
       <div className="desktop-menu">
