@@ -1,0 +1,108 @@
+/* Add the following CSS for the AboutMe component */
+
+/* About Me Section */
+
+.break{
+    width: full;
+    height: 7px;
+    background-color: rgb(5, 14, 38);
+  }
+#aboutme {
+    background-color: #0c0d0f;
+    color: #d1d5db;
+    padding: 4rem 1rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Max width container and flex layout */
+  #aboutme .max-w-5xl {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  
+  @media (min-width: 768px) {
+    #aboutme .max-w-5xl {
+      flex-direction: row;
+      gap: 5rem;
+    }
+  }
+  
+  /* Heading styles */
+  #aboutme h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #60a5fa;
+    margin-bottom: 1rem;
+  }
+  
+  /* Paragraph styles */
+  #aboutme p {
+    font-size: 1.125rem;
+    color: #d1d5db;
+    line-height: 1.75;
+    max-width: 32rem;
+    text-align: center;
+  }
+  
+  @media (min-width: 768px) {
+    #aboutme p {
+      text-align: left;
+    }
+  }
+  
+  /* Image container */
+  #aboutme .relative {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Glowing Effect */
+  #aboutme .glowing-effect {
+    position: absolute;
+    width: 18rem;
+    height: 18rem;
+    border-radius: 50%;
+    background-color: #60a5fa;
+    opacity: 0.3;
+    filter: blur(1.5rem);
+    animation: glowingEffect 2.5s ease-in-out infinite;
+  }
+  
+  @keyframes glowingEffect {
+    0%, 100% {
+      scale: 1;
+      opacity: 0.3;
+    }
+    50% {
+      scale: 1.05;
+      opacity: 0.4;
+    }
+  }
+  
+  /* Floating Image */
+  #aboutme .floating-image {
+    position: relative;
+    width: 18rem;
+    height: 18rem;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 4px solid #60a5fa;
+    animation: floatingImage 3s ease-in-out infinite;
+  }
+  
+  @keyframes floatingImage {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
