@@ -87,8 +87,11 @@
     padding: 10px 0;
     transition: color 0.3s ease;
   }
-  
-  .menu-item:hover, .menu-item.active {
+  .menu-item:hover
+  {
+    color: #fff;
+  }
+ .menu-item.active {
     color: #1e90ff;
   }
   
@@ -176,3 +179,36 @@
     }
   }
   
+  /* Add this to your existing CSS */
+
+/* Base styles for menu items */
+.menu-item {
+  position: relative;
+  font-size: 20px;
+  color: #ccc;
+  text-decoration: none;
+  padding: 10px 0;
+  transition: color 0.3s ease;
+}
+
+/* Animated underline */
+.menu-item::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -4px; /* Adjust spacing below text */
+  width: 0%;
+  height: 3px; /* Thickness of the underline */
+  background-color: #1e90ff;
+  transition: width 0.7s ease, left 0.7s ease;
+  transform: translateX(-50%);
+}
+
+/* Hover and active effect */
+.menu-item:hover::after,
+.menu-item.active::after {
+  width: 100%;
+}
+.menu-item.active {
+  color: #1e90ff; /* Optional: Change color slightly on hover */
+}
