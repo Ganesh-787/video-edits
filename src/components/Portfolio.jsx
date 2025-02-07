@@ -1,7 +1,9 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaPlus, FaTimes } from "react-icons/fa";
 import defaultImg from "../assets/default.jpg";
+
+// Import Videos
 import cVideo1 from "../assets/Commercial/video1.mp4";
 import cVideo2 from "../assets/Commercial/video2.mp4";
 import cVideo3 from "../assets/Commercial/video3.mp4";
@@ -19,13 +21,52 @@ import gVideo5 from "../assets/Gym/video5.mp4";
 import sVideo1 from "../assets/Simple/video1.mp4";
 import sVideo2 from "../assets/Simple/video2.mp4";
 import gameVideo1 from "../assets/Game/video1.mp4";
-import './Portfolio.css'; // Import CSS
+
+// Import Static Thumbnails
+import cThumb1 from "../assets/Commercial/thumb1.png";
+import cThumb2 from "../assets/Commercial/thumb2.png";
+import cThumb3 from "../assets/Commercial/thumb3.png";
+import fThumb1 from "../assets/Function/thumb1.png";
+import compThumb1 from "../assets/Complex/thumb1.png";
+import compThumb2 from "../assets/Complex/thumb2.png";
+import compThumb3 from "../assets/Complex/thumb3.png";
+import compThumb4 from "../assets/Complex/thumb4.png";
+import compThumb5 from "../assets/Complex/thumb5.png";
+import gThumb1 from "../assets/Gym/thumb1.png";
+import gThumb2 from "../assets/Gym/thumb2.png";
+import gThumb3 from "../assets/Gym/thumb3.png";
+import gThumb4 from "../assets/Gym/thumb4.png";
+import gThumb5 from "../assets/Gym/thumb5.png";
+import sThumb1 from "../assets/Simple/thumb1.png";
+import sThumb2 from "../assets/Simple/thumb2.png";
+import gameThumb1 from "../assets/Game/thumb1.png";
+
+import "./Portfolio.css";
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState(null);
   const [selectedVideo, setSelectedVideo] = useState(null);
-  const [thumbnails, setThumbnails] = useState({});
-  const videoRefs = useRef({});
+
+  // Mapping videos to static thumbnails
+  const thumbnailMap = {
+    [cVideo1]: cThumb1,
+    [cVideo2]: cThumb2,
+    [cVideo3]: cThumb3,
+    [fVideo1]: fThumb1,
+    [compVideo1]: compThumb1,
+    [compVideo2]: compThumb2,
+    [compVideo3]: compThumb3,
+    [compVideo4]: compThumb4,
+    [compVideo5]: compThumb5,
+    [gVideo1]: gThumb1,
+    [gVideo2]: gThumb2,
+    [gVideo3]: gThumb3,
+    [gVideo4]: gThumb4,
+    [gVideo5]: gThumb5,
+    [sVideo1]: sThumb1,
+    [sVideo2]: sThumb2,
+    [gameVideo1]: gameThumb1,
+  };
 
   const sections = [
     {
@@ -59,57 +100,18 @@ const Portfolio = () => {
     },
     {
       title: "Game",
-      videos: [{ src: gameVideo1 }]
-    }
+      videos: [{ src: gameVideo1 }],
+    },
   ];
-
-  // Function to get a random frame from the video
-  const getThumbnail = (videoSrc) => {
-    const videoRef = videoRefs.current[videoSrc];
-    if (videoRef) {
-      const canvas = document.createElement("canvas");
-      const context = canvas.getContext("2d");
-
-      // Wait for video metadata to be loaded (duration, videoWidth, etc.)
-      videoRef.onloadedmetadata = () => {
-        videoRef.currentTime = Math.random() * videoRef.duration; // Select a random time in the video
-      };
-
-      videoRef.onseeked = () => {
-        canvas.width = videoRef.videoWidth;
-        canvas.height = videoRef.videoHeight;
-        context.drawImage(videoRef, 0, 0, canvas.width, canvas.height);
-        const dataUrl = canvas.toDataURL();
-        setThumbnails((prev) => ({ ...prev, [videoSrc]: dataUrl })); // Store the thumbnail URL
-      };
-    }
-  };
-
-  useEffect(() => {
-    sections.forEach((section) => {
-      section.videos.forEach((video) => {
-        // Create ref for video
-        videoRefs.current[video.src] = document.createElement("video");
-        videoRefs.current[video.src].src = video.src;
-
-        // Load and generate thumbnails for each video
-        videoRefs.current[video.src].load();
-        getThumbnail(video.src);
-      });
-    });
-  }, []);
 
   return (
     <>
-    <div className="break"></div>
+      <div className="break"></div>
       <div id="portfolio" className="portfolio-container">
         <h2 className="portfolio-title">My Portfolio</h2>
         <div className="sections-container">
           {sections.map((section, index) => (
-            <div
-              key={index}
-              className="section-container"
-            >
+            <div key={index} className="section-container">
               <div
                 className="section-header"
                 onClick={() =>
@@ -138,9 +140,10 @@ const Portfolio = () => {
                     >
                       <div className="thumbnail">
                         <img
-                          src={thumbnails[video.src] || defaultImg}
+                          src={thumbnailMap[video.src] || defaultImg}
                           alt="Thumbnail"
                           className="thumbnail-img"
+                          loading="lazy"
                         />
                       </div>
                     </div>
@@ -159,7 +162,7 @@ const Portfolio = () => {
               >
                 <FaTimes size={24} />
               </button>
-              <video src={selectedVideo} controls className="video-player" />
+              <video src={selectedVideo} controls className="video-player" preload="none" />
             </div>
           </div>
         )}
