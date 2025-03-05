@@ -52,7 +52,7 @@ const Navbar = () => {
           </a>
         ))}
         <div className="social-icons">
-          <a href="https://www.instagram.com/ganesh_.creates" target="_blank" rel="noopener noreferrer" className="icon-wrapper">
+          <a href="https://www.instagram.com/ganeshfx_" target="_blank" rel="noopener noreferrer" className="icon-wrapper">
             <FaInstagram className="icon" />
           </a>
           <a href="https://wa.me/917741945536" target="_blank" rel="noopener noreferrer" className="icon-wrapper">
@@ -69,7 +69,7 @@ const Navbar = () => {
       {/* Desktop Navbar */}
       <div className="desktop-nav">
         <div className="social-icons">
-          <a href="https://www.instagram.com/ganesh_.creates" target="_blank" rel="noopener noreferrer" className="icon-wrapper">
+          <a href="https://www.instagram.com/ganeshfx_" target="_blank" rel="noopener noreferrer" className="icon-wrapper">
             <FaInstagram className="icon" />
           </a>
           <a href="https://wa.me/917741945536" target="_blank" rel="noopener noreferrer" className="icon-wrapper">

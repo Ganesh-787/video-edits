@@ -21,6 +21,9 @@ import gVideo5 from "../assets/Gym/video5.mp4";
 import sVideo1 from "../assets/Simple/video1.mp4";
 import sVideo2 from "../assets/Simple/video2.mp4";
 import gameVideo1 from "../assets/Game/video1.mp4";
+import rVideo1 from "../assets/Viral reels edit/video1.mp4";
+import rVideo2 from "../assets/Viral reels edit/video2.mp4";
+import rVideo3 from "../assets/Viral reels edit/video3.mp4";
 
 // Import Static Thumbnails
 import cThumb1 from "../assets/Commercial/thumb1.png";
@@ -40,6 +43,9 @@ import gThumb5 from "../assets/Gym/thumb5.png";
 import sThumb1 from "../assets/Simple/thumb1.png";
 import sThumb2 from "../assets/Simple/thumb2.png";
 import gameThumb1 from "../assets/Game/thumb1.png";
+import rThumb1 from "../assets/Viral reels edit/thumb1.png";
+import rThumb2 from "../assets/Viral reels edit/thumb2.png";
+import rThumb3 from "../assets/Viral reels edit/thumb3.png";
 
 import "./Portfolio.css";
 
@@ -66,9 +72,16 @@ const Portfolio = () => {
     [sVideo1]: sThumb1,
     [sVideo2]: sThumb2,
     [gameVideo1]: gameThumb1,
+    [rVideo1]: rThumb1,
+    [rVideo2]: rThumb2,
+    [rVideo3]: rThumb3,
   };
 
   const sections = [
+    {
+      title: "Viral Reels Edits",
+      videos: [{ src: rVideo1 }, { src: rVideo2 }, { src: rVideo3 }],
+    },
     {
       title: "Commercials",
       videos: [{ src: cVideo1 }, { src: cVideo2 }, { src: cVideo3 }],

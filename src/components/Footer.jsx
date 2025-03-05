@@ -24,7 +24,7 @@ const Footer = () => {
           {/* Social Icons Section */}
           <div className="social-icons">
             <a
-              href="https://www.instagram.com/ganesh_.creates?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              href="https://www.instagram.com/ganeshfx_"
               target="_blank"
               rel="noopener noreferrer"
             >
