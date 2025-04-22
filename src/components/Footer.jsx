@@ -38,7 +38,7 @@ const Footer = () => {
               <FaWhatsapp size={24} />
             </a>
             <a
-              href="mailto:ganeshganjave12@gmail.com"
+              href="mailto:ganeshfx1205@gmail.com"
             >
               <FaEnvelope size={24} />
             </a>
