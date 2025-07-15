@@ -23,14 +23,12 @@ import mVideo2 from "../assets/Section 2/video2.mp4";
 import mVideo3 from "../assets/Section 2/video3.mp4";
 import mVideo4 from "../assets/Section 2/video4.mp4";
 import mVideo5 from "../assets/Section 2/video5.mp4";
-import mVideo6 from "../assets/Section 2/video6.mp4";
 import mVideo7 from "../assets/Section 2/video7.mp4";
 import mThumb1 from "../assets/Section 2/thumb1.png";
 import mThumb2 from "../assets/Section 2/thumb2.png";
 import mThumb3 from "../assets/Section 2/thumb3.png";
 import mThumb4 from "../assets/Section 2/thumb4.png";
 import mThumb5 from "../assets/Section 2/thumb5.png";
-import mThumb6 from "../assets/Section 2/thumb6.png";
 import mThumb7 from "../assets/Section 2/thumb7.png";
 
 // Tattoo Cinematics
@@ -86,7 +84,6 @@ const Portfolio = () => {
     [mVideo3]: mThumb3,
     [mVideo4]: mThumb4,
     [mVideo5]: mThumb5,
-    [mVideo6]: mThumb6,
     [mVideo7]: mThumb7,
 
     // Tattoo Cinematics
@@ -114,7 +111,7 @@ const Portfolio = () => {
 
     {
       title: "Motion Graphics & Animation",
-      videos: [mVideo1, mVideo2, mVideo3, mVideo4, mVideo5, mVideo6, mVideo7],
+      videos: [mVideo1, mVideo2, mVideo3, mVideo4, mVideo5, mVideo7],
     },
     {
       title: "YouTube & Long-Form Videos",
