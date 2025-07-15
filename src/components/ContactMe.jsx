@@ -59,7 +59,7 @@ const ContactPage = () => {
       <div className="w-full h-[10px] bg-gray-900 mt-12 break"></div>
       <div className="contact-page" id="contact">
         <div className="max-w-5xl mx-auto flex flex-col items-center gap-10">
-          <h2>Contact US</h2>
+          <h2>Contact Me</h2>
           <p>
             I’d love to hear from you! Whether you have a question, suggestion, or just want to connect, feel free to reach out.
           </p>

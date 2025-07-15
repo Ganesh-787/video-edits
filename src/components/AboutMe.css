@@ -108,4 +108,13 @@
       transform: translateY(-10px);
     }
   }
-  
+  .floating-image {
+  width: 18rem;
+  height: 18rem;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center; /* This adjusts the focus */
+  border: 4px solid #60a5fa;
+  box-shadow: 0 0 30px rgba(96, 165, 250, 0.5);
+  animation: floatingImage 3s ease-in-out infinite;
+}

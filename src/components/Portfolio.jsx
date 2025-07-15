@@ -3,55 +3,67 @@ import { motion } from "framer-motion";
 import { FaPlus, FaTimes } from "react-icons/fa";
 import defaultImg from "../assets/default.jpg";
 
-// Import Videos
+// Reels for Coaches, Creators & Brands
+import rVideo1 from "../assets/Section 1/video1.mp4";
+import rVideo2 from "../assets/Section 1/video2.mp4";
+import rVideo3 from "../assets/Section 1/video3.mp4";
+import rVideo4 from "../assets/Section 1/video4.mp4";
+import rVideo5 from "../assets/Section 1/video5.mp4";
+import rVideo6 from "../assets/Section 1/video6.mp4";
+import rThumb1 from "../assets/Section 1/thumb1.png";
+import rThumb2 from "../assets/Section 1/thumb2.png";
+import rThumb3 from "../assets/Section 1/thumb3.png";
+import rThumb4 from "../assets/Section 1/thumb4.png";
+import rThumb5 from "../assets/Section 1/thumb5.png";
+import rThumb6 from "../assets/Section 1/thumb6.png";
+
+// Motion Graphics & Animation
+import mVideo1 from "../assets/Section 2/video1.mp4";
+import mVideo2 from "../assets/Section 2/video2.mp4";
+import mVideo3 from "../assets/Section 2/video3.mp4";
+import mVideo4 from "../assets/Section 2/video4.mp4";
+import mVideo5 from "../assets/Section 2/video5.mp4";
+import mVideo6 from "../assets/Section 2/video6.mp4";
+import mVideo7 from "../assets/Section 2/video7.mp4";
+import mThumb1 from "../assets/Section 2/thumb1.png";
+import mThumb2 from "../assets/Section 2/thumb2.png";
+import mThumb3 from "../assets/Section 2/thumb3.png";
+import mThumb4 from "../assets/Section 2/thumb4.png";
+import mThumb5 from "../assets/Section 2/thumb5.png";
+import mThumb6 from "../assets/Section 2/thumb6.png";
+import mThumb7 from "../assets/Section 2/thumb7.png";
+
+// Tattoo Cinematics
 import cVideo1 from "../assets/Commercial/video1.mp4";
 import cVideo2 from "../assets/Commercial/video2.mp4";
 import cVideo3 from "../assets/Commercial/video3.mp4";
-import fVideo1 from "../assets/Function/video1.mp4";
+import cThumb1 from "../assets/Commercial/thumb1.png";
+import cThumb2 from "../assets/Commercial/thumb2.png";
+import cThumb3 from "../assets/Commercial/thumb3.png";
+
+// Complex Gym Edits
 import compVideo1 from "../assets/Complex/video1.mp4";
 import compVideo2 from "../assets/Complex/video2.mp4";
 import compVideo3 from "../assets/Complex/video3.mp4";
 import compVideo4 from "../assets/Complex/video4.mp4";
 import compVideo5 from "../assets/Complex/video5.mp4";
-import gVideo1 from "../assets/Gym/video1.mp4";
-import gVideo2 from "../assets/Gym/video2.mp4";
-import gVideo3 from "../assets/Gym/video3.mp4";
-import gVideo4 from "../assets/Gym/video4.mp4";
-import gVideo5 from "../assets/Gym/video5.mp4";
-import sVideo1 from "../assets/Simple/video1.mp4";
-import sVideo2 from "../assets/Simple/video2.mp4";
-import gameVideo1 from "../assets/Game/video1.mp4";
-import rVideo1 from "../assets/Viral reels edit/video1.mp4";
-import rVideo2 from "../assets/Viral reels edit/video2.mp4";
-import rVideo3 from "../assets/Viral reels edit/video3.mp4";
-import rVideo4 from "../assets/Viral reels edit/video4.mp4";
-import rVideo5 from "../assets/Viral reels edit/video5.mp4";
-import rVideo6 from "../assets/Viral reels edit/video6.mp4";
-
-// Import Static Thumbnails
-import cThumb1 from "../assets/Commercial/thumb1.png";
-import cThumb2 from "../assets/Commercial/thumb2.png";
-import cThumb3 from "../assets/Commercial/thumb3.png";
-import fThumb1 from "../assets/Function/thumb1.png";
 import compThumb1 from "../assets/Complex/thumb1.png";
 import compThumb2 from "../assets/Complex/thumb2.png";
 import compThumb3 from "../assets/Complex/thumb3.png";
 import compThumb4 from "../assets/Complex/thumb4.png";
 import compThumb5 from "../assets/Complex/thumb5.png";
-import gThumb1 from "../assets/Gym/thumb1.png";
-import gThumb2 from "../assets/Gym/thumb2.png";
-import gThumb3 from "../assets/Gym/thumb3.png";
-import gThumb4 from "../assets/Gym/thumb4.png";
-import gThumb5 from "../assets/Gym/thumb5.png";
+
+// Personal Projects
+import sVideo1 from "../assets/Simple/video1.mp4";
+import sVideo2 from "../assets/Simple/video2.mp4";
 import sThumb1 from "../assets/Simple/thumb1.png";
 import sThumb2 from "../assets/Simple/thumb2.png";
-import gameThumb1 from "../assets/Game/thumb1.png";
-import rThumb1 from "../assets/Viral reels edit/thumb1.png";
-import rThumb2 from "../assets/Viral reels edit/thumb2.png";
-import rThumb3 from "../assets/Viral reels edit/thumb3.png";
-import rThumb4 from "../assets/Viral reels edit/thumb4.png";
-import rThumb5 from "../assets/Viral reels edit/thumb5.png";
-import rThumb6 from "../assets/Viral reels edit/thumb6.png";
+
+// Clients
+import sage from "../assets/sage.jpg";
+import kemo from "../assets/kemo.jpg";
+import marathi from "../assets/marathi.jpg";
+import aryan from "../assets/aryan.jpg";
 
 import "./Portfolio.css";
 
@@ -59,70 +71,100 @@ const Portfolio = () => {
   const [activeSection, setActiveSection] = useState(null);
   const [selectedVideo, setSelectedVideo] = useState(null);
 
-  // Mapping videos to static thumbnails
   const thumbnailMap = {
-    [cVideo1]: cThumb1,
-    [cVideo2]: cThumb2,
-    [cVideo3]: cThumb3,
-    [fVideo1]: fThumb1,
-    [compVideo1]: compThumb1,
-    [compVideo2]: compThumb2,
-    [compVideo3]: compThumb3,
-    [compVideo4]: compThumb4,
-    [compVideo5]: compThumb5,
-    [gVideo1]: gThumb1,
-    [gVideo2]: gThumb2,
-    [gVideo3]: gThumb3,
-    [gVideo4]: gThumb4,
-    [gVideo5]: gThumb5,
-    [sVideo1]: sThumb1,
-    [sVideo2]: sThumb2,
-    [gameVideo1]: gameThumb1,
+    // Section 1
     [rVideo1]: rThumb1,
     [rVideo2]: rThumb2,
     [rVideo3]: rThumb3,
     [rVideo4]: rThumb4,
     [rVideo5]: rThumb5,
     [rVideo6]: rThumb6,
+
+    // Section 2 - Motion Graphics
+    [mVideo1]: mThumb1,
+    [mVideo2]: mThumb2,
+    [mVideo3]: mThumb3,
+    [mVideo4]: mThumb4,
+    [mVideo5]: mThumb5,
+    [mVideo6]: mThumb6,
+    [mVideo7]: mThumb7,
+
+    // Tattoo Cinematics
+    [cVideo1]: cThumb1,
+    [cVideo2]: cThumb2,
+    [cVideo3]: cThumb3,
+
+    // Complex Gym Edits
+    [compVideo1]: compThumb1,
+    [compVideo2]: compThumb2,
+    [compVideo3]: compThumb3,
+    [compVideo4]: compThumb4,
+    [compVideo5]: compThumb5,
+
+    // Personal Projects
+    [sVideo1]: sThumb1,
+    [sVideo2]: sThumb2,
   };
 
   const sections = [
     {
-      title: "Viral Reels Edits",
-      videos: [{src: rVideo4},{src: rVideo5},{ src: rVideo1 }, { src: rVideo2 }, { src: rVideo3 },{src: rVideo6}],
+      title: "Reels for Coaches, Creators & Brands",
+      videos: [rVideo1, rVideo2, rVideo3, rVideo4, rVideo5, rVideo6],
+    },
+
+    {
+      title: "Motion Graphics & Animation",
+      videos: [mVideo1, mVideo2, mVideo3, mVideo4, mVideo5, mVideo6, mVideo7],
     },
     {
-      title: "Commercials",
-      videos: [{ src: cVideo1 }, { src: cVideo2 }, { src: cVideo3 }],
+      title: "YouTube & Long-Form Videos",
+      type: "youtube",
+      embedUrl:
+        "https://www.youtube.com/embed/videoseries?list=PLPms_LkqT3OuSJTTwhv6bGeq_xMd57EHa",
     },
-    { title: "Function Edits", videos: [{ src: fVideo1 }] },
+
     {
-      title: "Complex Edits",
-      videos: [
-        { src: compVideo1 },
-        { src: compVideo2 },
-        { src: compVideo3 },
-        { src: compVideo4 },
-        { src: compVideo5 },
-      ],
+      title: "Tattoo Cinematics",
+      videos: [cVideo1, cVideo2, cVideo3],
     },
     {
       title: "Gym Edits",
-      videos: [
-        { src: gVideo1 },
-        { src: gVideo2 },
-        { src: gVideo3 },
-        { src: gVideo4 },
-        { src: gVideo5 },
-      ],
+      videos: [compVideo1, compVideo2, compVideo3, compVideo4, compVideo5],
     },
     {
-      title: "Simple Edits",
-      videos: [{ src: sVideo1 }, { src: sVideo2 }],
+      title: "Personal Projects",
+      videos: [sVideo1, sVideo2],
+    },
+  ];
+
+  const testimonials = [
+    {
+      name: "Sage Phoenix",
+      role: "Fitness Coach (Australia)",
+      feedback:
+        "Ganesh delivered 16 high-quality reels with fast turnaround. Loved the creative angles & clean cuts!",
+      image: sage,
     },
     {
-      title: "Game",
-      videos: [{ src: gameVideo1 }],
+      name: "Kemo",
+      role: "BGMI Creator",
+      feedback:
+        "His editing took my gaming products promo reel to the next level. He knows how to create engaging moments and transitions.",
+      image: kemo,
+    },
+    {
+      name: "The Marathi Trader",
+      role: "Trading Content Creator",
+      feedback:
+        "He’s consistent, sharp, and understands what hooks an audience. Very reliable for long-form and short-form content.",
+      image: marathi,
+    },
+    {
+      name: "Aryan Agarwal",
+      role: "Entertainment Content Creator",
+      feedback:
+        "Ganesh truly understands pacing, punchlines, and retention for viral-style content. The final edits feel effortless and binge-worthy.",
+      image: aryan,
     },
   ];
 
@@ -154,22 +196,36 @@ const Portfolio = () => {
                   exit={{ opacity: 0, height: 0 }}
                   className="video-thumbnails"
                 >
-                  {section.videos.map((video, idx) => (
-                    <div
-                      key={idx}
-                      className="thumbnail-container"
-                      onClick={() => setSelectedVideo(video.src)}
-                    >
-                      <div className="thumbnail">
-                        <img
-                          src={thumbnailMap[video.src] || defaultImg}
-                          alt="Thumbnail"
-                          className="thumbnail-img"
-                          loading="lazy"
-                        />
-                      </div>
+                  {section.type === "youtube" ? (
+                    <div className="youtube-embed-wrapper">
+                      <iframe
+                        width="100%"
+                        height="400"
+                        src={section.embedUrl}
+                        title={section.title}
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      ></iframe>
                     </div>
-                  ))}
+                  ) : (
+                    section.videos.map((src, idx) => (
+                      <div
+                        key={idx}
+                        className="thumbnail-container"
+                        onClick={() => setSelectedVideo(src)}
+                      >
+                        <div className="thumbnail">
+                          <img
+                            src={thumbnailMap[src] || defaultImg}
+                            alt="Thumbnail"
+                            className="thumbnail-img"
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
+                    ))
+                  )}
                 </motion.div>
               )}
             </div>
@@ -184,10 +240,44 @@ const Portfolio = () => {
               >
                 <FaTimes size={24} />
               </button>
-              <video src={selectedVideo} controls className="video-player" preload="none" />
+              <video
+                src={selectedVideo}
+                controls
+                className="video-player"
+                preload="none"
+              />
             </div>
           </div>
         )}
+      </div>
+      <div className="break"></div>
+      <div className="testimonials-section">
+        <h2 className="testimonial-title">What Clients Say</h2>
+        <div className="testimonial-carousel-mask">
+          <div className="testimonial-carousel-track">
+            {[...testimonials, ...testimonials].map((t, idx) => (
+              <motion.div
+                key={idx}
+                className="testimonial-carousel-card"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: idx * 0.2 }}
+                viewport={{ once: true }}
+              >
+                <div className="testimonial-header">
+                  <img src={t.image} alt={t.name} className="testimonial-img" />
+                  <div className="testimonial-info">
+                    <div className="testimonial-text-block">
+                      <h4 className="testimonial-name">{t.name}</h4>
+                      <p className="testimonial-role">{t.role}</p>
+                    </div>
+                  </div>
+                </div>
+                <p className="testimonial-feedback">“{t.feedback}”</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
       </div>
     </>
   );
